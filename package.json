@@ -1,8 +1,14 @@
 {
   "name": "coolsite",
   "version": "1.0.0",
+  "scripts": {
+    "build": "yarn run node-sass src/sass/*.scss -o dist/ && cp -r src/html/* dist/."
+  },
   "main": "index.js",
   "repository": "git@github.com:arnorhs/coolsite.git",
   "author": "arnorhs <arnorhs@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.0"
+  }
 }
