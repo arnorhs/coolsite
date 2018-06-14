@@ -1,3 +1,3 @@
-var path = require('path')
+var assert = require('assert')
 
 assert(1 === 1)
