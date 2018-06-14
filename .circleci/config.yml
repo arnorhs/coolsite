@@ -17,8 +17,6 @@ jobs:
     working_directory: ~/
 
     steps:
-      - checkout
-
       - run: yarn install
         
       # run tests!
