@@ -17,18 +17,9 @@ jobs:
     working_directory: ~/coolsite
 
     steps:
-      - run: pwd
-
-      - run: ls
-
       - checkout
-
-      - run: pwd
-
-      - run: ls
 
       - run: yarn install
         
-      # run tests!
       - run: yarn test
 
