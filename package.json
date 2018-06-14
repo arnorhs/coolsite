@@ -2,7 +2,8 @@
   "name": "coolsite",
   "version": "1.0.0",
   "scripts": {
-    "build": "yarn run node-sass src/sass/*.scss -o dist/ && cp -r src/html/* dist/."
+    "build": "yarn run node-sass src/sass/*.scss -o dist/ && cp -r src/html/* dist/.",
+    "test": "node test.js"
   },
   "main": "index.js",
   "repository": "git@github.com:arnorhs/coolsite.git",
