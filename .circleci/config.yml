@@ -17,6 +17,16 @@ jobs:
     working_directory: ~/
 
     steps:
+      - run: pwd
+
+      - run: ls
+
+      - checkout
+
+      - run: pwd
+
+      - run: ls
+
       - run: yarn install
         
       # run tests!
