@@ -42,7 +42,10 @@ jobs:
       - checkout
       - run: yarn install
       # need to find better solution!
-      - run: echo '139.162.254.191 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKtp3WzH/IRrpZdRyecgn9qlyQS1yqAbOTxyuDKJurdasBUtcWQItCLukkiryKSEN5DgWipFLPA+4Tw3Csq5KcQ=' >> ~/.ssh/known_hosts
+      - run:
+          name: adding the remote server to known hosts
+          command: |
+            echo '139.162.254.191 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKtp3WzH/IRrpZdRyecgn9qlyQS1yqAbOTxyuDKJurdasBUtcWQItCLukkiryKSEN5DgWipFLPA+4Tw3Csq5KcQ=' >> ~/.ssh/known_hosts
       - run: yarn run deploy:production
 
 workflows:
