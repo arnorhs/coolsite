@@ -5,7 +5,7 @@
     "build": "yarn run node-sass src/sass/*.scss -o dist/ && cp -r src/html/* dist/.",
     "test": "node test.js",
     "netlify": "yarn test && yarn run build",
-    "deploy:prod": "yarn run shipit production deploy"
+    "deploy:production": "yarn run shipit production deploy"
   },
   "main": "index.js",
   "repository": "git@github.com:arnorhs/coolsite.git",
