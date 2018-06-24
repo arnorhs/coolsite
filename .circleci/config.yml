@@ -41,10 +41,9 @@ jobs:
     steps:
       - checkout
       - run: yarn install
-      - run:
-          name: Deploy Over SSH
-          command: |
-            yarn run deploy:production
+      # need to find better solution!
+      - run: echo '139.162.254.191 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKtp3WzH/IRrpZdRyecgn9qlyQS1yqAbOTxyuDKJurdasBUtcWQItCLukkiryKSEN5DgWipFLPA+4Tw3Csq5KcQ=' >> ~/.ssh/known_hosts
+      - run: yarn run deploy:production
 
 workflows:
   version: 2
