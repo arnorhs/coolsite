@@ -4,13 +4,16 @@
   "scripts": {
     "build": "yarn run node-sass src/sass/*.scss -o dist/ && cp -r src/html/* dist/.",
     "test": "node test.js",
-    "netlify": "yarn test && yarn run build"
+    "netlify": "yarn test && yarn run build",
+    "deploy:prod": "yarn run shipit production deploy"
   },
   "main": "index.js",
   "repository": "git@github.com:arnorhs/coolsite.git",
   "author": "arnorhs <arnorhs@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "node-sass": "^4.9.0"
+    "node-sass": "^4.9.0",
+    "shipit-cli": "4.1.1",
+    "shipit-deploy": "4.1.1"
   }
 }
