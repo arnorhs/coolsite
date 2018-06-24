@@ -40,6 +40,7 @@ jobs:
     ##  enabled: true
     steps:
       - checkout
+      - run: yarn install
       - run:
           name: Deploy Over SSH
           command: |
